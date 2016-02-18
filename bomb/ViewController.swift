@@ -10,6 +10,9 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var purpleBomb: UIImageView!
+    
+    @IBOutlet weak var greenBomb: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -21,5 +24,16 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func hidePurpleBomb(sender: AnyObject) {
+        purpleBomb.hidden = true
+        
+        greenBomb.hidden = false
+    }
+    
+    @IBAction func hideGreenBomb(sender: AnyObject) {
+        greenBomb.hidden = true
+        
+        purpleBomb.hidden = false
+    }
 }
 
